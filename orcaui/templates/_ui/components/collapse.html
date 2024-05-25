@@ -1,0 +1,4 @@
+<div class="{{ classes }}"
+     x-data="{active: {{ open|yesno:"true,false" }}, toggleCollapse(){ this.active = !this.active; } }">
+  {{ children }}
+</div>

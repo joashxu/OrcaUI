@@ -1,0 +1,35 @@
+<div>
+  <p class="font-medium mb-2">Default</p>
+  <div class="border border-base-300 bg-base-200">
+    {% #Collapse %}
+      {% #CollapseTrigger %}Click me{% /CollapseTrigger %}
+      {% #CollapseContent %}Hello world.{% /CollapseContent %}
+    {% /Collapse %}
+  </div>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Collapse with icon</p>
+  <div class="border border-base-300 bg-base-200">
+    {% #Collapse %}
+      {% #CollapseTrigger %}
+        <span>Click me</span>
+        {% Icon name="i-[heroicons--chevron-down]" classes="duration-200 ease-out" :class="{ 'rotate-180': active }" %}
+      {% /CollapseTrigger %}
+      {% #CollapseContent %}Hello world.{% /CollapseContent %}
+    {% /Collapse %}
+  </div>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Collapse open by default</p>
+  <div class="border border-base-300 bg-base-200">
+    {% #Collapse open %}
+      {% #CollapseTrigger %}
+        <span>Click me</span>
+        {% Icon name="i-[heroicons--chevron-down]" classes="duration-200 ease-out" :class="{ 'rotate-180': active }" %}
+      {% /CollapseTrigger %}
+      {% #CollapseContent %}Hello world.{% /CollapseContent %}
+    {% /Collapse %}
+  </div>
+</div>
