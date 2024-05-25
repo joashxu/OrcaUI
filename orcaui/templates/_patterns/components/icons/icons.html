@@ -1,0 +1,17 @@
+<div>
+  <p class="font-medium mb-2">Default Icons</p>
+  <div class="inline-flex gap-4">
+    {% for icon in icons %}
+      {% Icon name=icon.name %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2 ">Icon Size</p>
+  <div class="inline-flex gap-4 items-center justify-center">
+  {% for icon in icon_sizes %}
+    {% Icon name=icon.name size=icon.size %}
+  {% endfor %}
+  </div>
+</div>

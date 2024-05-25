@@ -1,0 +1,20 @@
+name: Icons
+context:
+  icons:
+    - name: i-[heroicons--adjustments-horizontal]
+    - name: i-[heroicons--face-smile]
+    - name: i-[heroicons--archive-box-solid]
+    - name: i-[heroicons--chat-bubble-bottom-center-solid]
+    - name: i-[heroicons--bell-alert]
+    - name: i-[heroicons--eye]
+  icon_sizes:
+    - name: i-[heroicons--adjustments-horizontal-16-solid]
+      size: xs
+    - name: i-[heroicons--face-smile-20-solid]
+      size: sm
+    - name: i-[heroicons--archive-box-solid]
+      size: base
+    - name: i-[heroicons--chat-bubble-bottom-center-solid]
+      size: lg
+    - name: i-[heroicons--bell-alert]
+      size: xl
