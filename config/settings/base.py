@@ -76,11 +76,11 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.mfa",
     "allauth.socialaccount",
+    "slippers",
 ]
 
 LOCAL_APPS = [
     "orcaui.users",
-    # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -183,10 +183,13 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "orcaui.users.context_processors.allauth_settings",
+                "orcaui.apps.users.context_processors.allauth_settings",
+            ],
+            "builtins": [
+                "slippers.templatetags.slippers",
             ],
         },
-    },
+    }
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#form-renderer
