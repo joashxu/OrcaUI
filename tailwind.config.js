@@ -25,7 +25,7 @@ function loadIconSet(prefix) {
 
 
 function addDynamicIconSelectors(options) {
-    const prefix = 'icon';
+    const prefix = 'i';
     const outDir = `${TARGET}`;
 
     mkdir(outDir, { recursive: true }, (err) => { if (err) throw err; });
@@ -67,11 +67,12 @@ function addDynamicIconSelectors(options) {
 module.exports = {
   content: [
       './orcaui/templates/**/*.html',
+      './orcaui/templates/**/*.yaml',
   ],
   plugins: [
-      require("@tailwindcss/typography"),
       require('daisyui'),
-      //addDynamicIconSelectors(),
+      require('@iconify-json/heroicons'),
+      addDynamicIconSelectors(),
   ],
   daisyui: {
       themes: ['light', 'dark'],

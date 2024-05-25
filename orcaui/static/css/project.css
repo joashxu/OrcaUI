@@ -1,13 +1,8 @@
-/* These styles are generated from project.scss. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.alert-debug {
-  color: black;
-  background-color: white;
-  border-color: #d6e9c6;
-}
 
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
+[x-cloak] {
+    display: none !important;
 }
