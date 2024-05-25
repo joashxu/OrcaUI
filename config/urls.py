@@ -8,19 +8,7 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/",
-        TemplateView.as_view(template_name="pages/about.html"),
-        name="about",
-    ),
-    # Django Admin, use {% url 'admin:index' %}
-    path(settings.ADMIN_URL, admin.site.urls),
-    # User management
-    path("users/", include("orcaui.users.urls", namespace="users")),
-    path("accounts/", include("allauth.urls")),
-    path("pattern-library/", include("pattern_library.urls")),
-    *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
+    path("", include("orcaui.renderer.urls")),
 ]
 
 
@@ -28,6 +16,7 @@ if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
     urlpatterns += [
+        path("pattern-library/", include("pattern_library.urls")),
         path(
             "400/",
             default_views.bad_request,

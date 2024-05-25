@@ -1,0 +1,4 @@
+<button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline {{ classes }}">
+  {{ children }}
+  {% Icon name="i-[heroicons--chevron-down]" classes="duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" %}
+</button>

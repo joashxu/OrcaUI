@@ -1,0 +1,5 @@
+<div class="cursor-pointer group"
+     x-data="{ id: $id('accordion') }" 
+     {% if active %}x-init="setActiveAccordion(id)"{% endif %}>
+  {{ children }}
+</div>
