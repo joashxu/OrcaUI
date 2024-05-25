@@ -1,0 +1,9 @@
+components:
+  Icon: "_ui/components/icon.html"
+  Collapse: "_ui/components/collapse.html"
+  CollapseTrigger: "_ui/components/collapse_trigger.html"
+  CollapseContent: "_ui/components/collapse_content.html"
+  Accordion: "_ui/components/accordion.html"
+  AccordionItem: "_ui/components/accordion_item.html"
+  AccordionTrigger: "_ui/components/accordion_trigger.html"
+  AccordionContent: "_ui/components/accordion_content.html"

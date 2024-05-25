@@ -19,9 +19,7 @@ urlpatterns = [
     # User management
     path("users/", include("orcaui.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    # Your stuff: custom urls includes go here
-    # ...
-    # Media files
+    path("pattern-library/", include("pattern_library.urls")),
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
 

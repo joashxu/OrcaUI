@@ -77,6 +77,7 @@ THIRD_PARTY_APPS = [
     "allauth.mfa",
     "allauth.socialaccount",
     "slippers",
+    "pattern_library",
 ]
 
 LOCAL_APPS = [
@@ -183,7 +184,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "orcaui.apps.users.context_processors.allauth_settings",
+                "orcaui.users.context_processors.allauth_settings",
             ],
             "builtins": [
                 "slippers.templatetags.slippers",
@@ -283,3 +284,21 @@ SOCIALACCOUNT_FORMS = {"signup": "orcaui.users.forms.UserSocialSignupForm"}
 INSTALLED_APPS += ["compressor"]
 STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
+# Pattern Library
+# ------------------------------------------------------------------------------
+PATTERN_LIBRARY = {
+    "SECTIONS": (
+        ("components", ["_patterns/components"]),
+    ),
+
+    # Configure which files to detect as templates.
+    "TEMPLATE_SUFFIX": ".html",
+
+    # Set which template components should be rendered inside of,
+    # so they may use page-level component dependencies like CSS.
+    "PATTERN_BASE_TEMPLATE_NAME": "base_pattern.html",
+
+    # Any template in BASE_TEMPLATE_NAMES or any template that extends a template in
+    # BASE_TEMPLATE_NAMES is a "page" and will be rendered as-is without being wrapped.
+    #"BASE_TEMPLATE_NAMES": ["base_pattern.html"],
+}
