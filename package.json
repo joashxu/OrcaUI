@@ -4,9 +4,9 @@
     "tailwind-build": "tailwindcss -i ./orcaui/static/css/project.css -o ./orcaui/static/css/project_out.css"
   },
   "dependencies": {
-    "@iconify-json/heroicons": "^1.1.10",
+    "@iconify-json/heroicons": "^1.1.21",
     "@iconify/utils": "^2.1.20",
-    "tailwindcss": "^3.4.3",
-    "daisyui": "^4.11.1"
+    "daisyui": "^4.12.10",
+    "tailwindcss": "^3.4.3"
   }
 }

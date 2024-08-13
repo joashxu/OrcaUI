@@ -10,8 +10,10 @@ context:
   icon_sizes:
     - name: i-[heroicons--adjustments-horizontal-16-solid]
       size: xs
+      viewbox: xs
     - name: i-[heroicons--face-smile-20-solid]
       size: sm
+      viewbox: sm
     - name: i-[heroicons--archive-box-solid]
       size: base
     - name: i-[heroicons--chat-bubble-bottom-center-solid]

@@ -75,7 +75,7 @@ module.exports = {
       addDynamicIconSelectors(),
   ],
   daisyui: {
-      themes: ['light', 'dark'],
+      themes: ['light', 'dark', 'cupcake', 'bumblebee', 'retro'],
       styled: true,
   }
 }

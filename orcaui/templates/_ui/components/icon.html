@@ -1,6 +1,6 @@
 {% var size=size|match:"xs: xs, sm: sm, base: base, lg: lg, xl: xl"|default:"base" %}
 {% var icon_size=size|match:"xs: h-4 w-4 , sm: h-5 w-5, base: h-6 w-6 , lg: h-7 w-7, xl: h-8 w-8 " %}
-{% var viewbox=size|match:"xs: 0 0 16 16 , sm: 0 0 20 20 , base: 0 0 24 24 , lg: 0 0 24 24 , xl: 0 0 24 24" %}
+{% var viewbox=viewbox|match:"xs: 0 0 16 16 , sm: 0 0 20 20 "|default:"0 0 24 24" %}
 {% var icon_path="icons/"|add:name %}
 
 <svg xmlns="http://www.w3.org/2000/svg"
