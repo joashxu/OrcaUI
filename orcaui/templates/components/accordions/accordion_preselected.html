@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% #Accordion %}
+    {% #AccordionItem %}
+      {% #AccordionTrigger %}Click to open{% /AccordionTrigger %}
+      {% #AccordionContent %}
+        Oh hello, hi there.
+      {% /AccordionContent %}
+    {% /AccordionItem %}
+    {% #AccordionItem active %}
+      {% #AccordionTrigger %}Click to open{% /AccordionTrigger %}
+      {% #AccordionContent %}
+        Oh hello, hi there.
+      {% /AccordionContent %}
+    {% /AccordionItem %}
+    {% #AccordionItem %}
+      {% #AccordionTrigger %}Click to open{% /AccordionTrigger %}
+      {% #AccordionContent %}
+        Oh hello, hi there.
+      {% /AccordionContent %}
+    {% /AccordionItem %}
+  {% /Accordion %}
+{% endblock %}
