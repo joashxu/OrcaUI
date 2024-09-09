@@ -1,7 +1,7 @@
 {
   "scripts": {
     "tailwind-watch": "tailwindcss -i ./orcaui/static/src/css/tailwind.css -o ./orcaui/static/dist/css/tailwind.css --watch",
-    "tailwind-build": "tailwindcss -i ./orcaui/static/src/css/tailwind.css -o ./orcaui/static/dist/css/tailwind.css"
+    "tailwind-build": "tailwindcss -i ./orcaui/static/src/css/tailwind.css -o ./orcaui/static/dist/css/tailwind.css --minify"
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.1.21",
