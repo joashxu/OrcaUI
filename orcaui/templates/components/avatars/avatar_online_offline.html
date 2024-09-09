@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="flex gap-4 items-center">
+    {% #Avatar %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" status="online"%}
+    {% /Avatar %}
+    {% #Avatar %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" status="offline" %}
+    {% /Avatar %}
+
+    {% #Avatar %}
+      {% #AvatarFallback status="online" %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+    {% #Avatar %}
+      {% #AvatarFallback status="offline" %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+  </div>
+{% endblock %}

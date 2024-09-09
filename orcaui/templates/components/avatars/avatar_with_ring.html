@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="flex gap-4 items-center">
+    {% #Avatar size="lg" with_ring %}
+      {% #AvatarFallback %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+    {% #Avatar size="lg" with_ring %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+      {% #AvatarFallback %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+  </div>
+{% endblock %}

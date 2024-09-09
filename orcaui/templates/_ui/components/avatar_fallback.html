@@ -1,0 +1,8 @@
+{% var status=status|match:"online: online , offline : offline "|default:"" %}
+
+<div class="avatar placeholder {{ status }}" :class="showImage ? 'hidden' : 'inline-flex'">
+  <div class="bg-neutral text-neutral-content"
+       :class="options">
+    {{ children }}
+  </div>
+</div>

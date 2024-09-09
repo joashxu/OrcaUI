@@ -1,0 +1,8 @@
+{% var size=size|match:"xs: w-6 , sm: w-8 , lg: w-12, xl: w-24"|default:"w-10" %}
+{% var rounded=rounded|default:"rounded-full" %}
+{% if with_ring %}{% var ring="ring ring-primary ring-offset-base-100 ring-offset-2" %}{% else %}{% var ring="" %}{% endif %}
+
+<div class="overflow-hidden inline-flex {% if with_ring %}p-3{% endif %}" 
+     x-data="{ showImage: false, options: '{{ size }} {{ rounded }} {{ ring }}' }">
+  {{ children }}
+</div>

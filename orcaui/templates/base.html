@@ -19,7 +19,7 @@
   {% endblock javascript %}
 </head>
 <body class="{% block bodyclass %}{% endblock bodyclass %}">
-<div class="container w-2/3 mx-auto mb-5 p-6">
+<div class="container w-full mx-auto mb-5 px-4 py-6">
     <div class="w-full inline-flex justify-end">
       <select class="select select-bordered w-full max-w-xs" data-choose-theme>
         <option value="light">Light</option>
@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  <div class="container w-2/3 mx-auto">
+  <div class="container w-3/4 mx-auto">
   {% block content %}
   {% endblock content %}
   </div>

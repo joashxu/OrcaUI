@@ -1,0 +1,14 @@
+name: Avatars
+context:
+  avatars:
+    - round: rounded-full
+    - round: rounded
+  avatar_sizes:
+    - size: extra-large
+    - size: large
+    - size: base
+    - size: small
+    - size: extra-small
+
+
+

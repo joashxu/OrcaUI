@@ -1,0 +1,9 @@
+{% var status=status|match:"online: online , offline : offline "|default:"" %}
+
+<div class="avatar {{ status }}"
+     x-cloak
+     x-data="{ imgSrc: null }"
+     x-init="let img = new Image(); img.src = '{{ src }}'; img.onload = () => { showImage = true; imgSrc = img.src; }"
+     :class="showImage ? 'inline-flex' : 'hidden'">
+  <div :class="options"><img {% attrs alt %} :src="imgSrc" onerror="this.onerror=null;this.src=''"></div>
+</div>

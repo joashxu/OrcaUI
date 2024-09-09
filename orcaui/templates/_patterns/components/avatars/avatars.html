@@ -1,0 +1,89 @@
+<div>
+  <p class="font-medium mb-2">Default Avatar</p>
+  <div class="inline-flex gap-4 items-center">
+    {% #Avatar %}
+      {% #AvatarFallback %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+    {% #Avatar %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+      {% #AvatarFallback %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+    {% #Avatar %}
+      {% AvatarImage src="https://invalid_image_url.webp" %}
+      {% #AvatarFallback %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+  </div>
+</div>
+
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Avatar with Ring</p>
+  <div class="inline-flex gap-4 items-center">
+    {% #Avatar size="lg" with_ring %}
+      {% #AvatarFallback %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+    {% #Avatar size="lg" with_ring %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+      {% #AvatarFallback %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+  </div>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Avatar Sizes</p>
+  <div class="inline-flex gap-4 items-center">
+    {% #Avatar size="xs" %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+    {% /Avatar %}
+    {% #Avatar size="sm" %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+    {% /Avatar %}
+    {% #Avatar %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+    {% /Avatar %}
+    {% #Avatar size="lg" %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+    {% /Avatar %}
+  </div>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Avatar Group</p>
+
+  {% #AvatarGroup %}
+    {% #Avatar size="sm" %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+    {% /Avatar %}
+    {% #Avatar size="sm" %}
+        {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+      {% /Avatar %}
+    {% #Avatar size="sm" %}
+        {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+      {% /Avatar %}
+    {% #Avatar size="sm" %}
+        {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" %}
+      {% /Avatar %}
+  {% /AvatarGroup %}
+</div>
+
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Online/offline status</p>
+  <div class="inline-flex gap-4">
+    {% #Avatar %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" status="online"%}
+    {% /Avatar %}
+    {% #Avatar %}
+      {% AvatarImage src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" status="offline" %}
+    {% /Avatar %}
+
+    {% #Avatar %}
+      {% #AvatarFallback status="online" %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+    {% #Avatar %}
+      {% #AvatarFallback status="offline" %}YS{% /AvatarFallback %}
+    {% /Avatar %}
+
+
+  </div>
+</div>
