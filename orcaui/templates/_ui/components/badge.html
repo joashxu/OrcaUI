@@ -1,0 +1,5 @@
+{% var size=size|match:"xs: badge-xs , sm: badge-sm , lg: badge-lg "|default:"badge-md" %}
+{% var variant=variant|match:"neutral: badge-neutral , primary: badge-primary , secondary: badge-secondary , accent: badge-accent , ghost: badge-ghost , info: badge-info , success: badge-success , warning: badge-warning , error: badge-error "|default:"" %}
+{% var modifier=modifier|match:"outline: badge-outline "|default:"" %}
+
+<div class="badge {{ modifier }} {{ variant }} {{ size }} {{ classes }}">{{ children }}</div>

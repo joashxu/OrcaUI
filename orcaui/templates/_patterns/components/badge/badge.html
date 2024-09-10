@@ -1,0 +1,61 @@
+<div>
+  <p class="font-medium mb-2">Badge with brand color</p>
+  {% #Badge %}Default{% /Badge %}
+  {% #Badge variant="neutral" %}Neutral{% /Badge %}
+  {% #Badge variant="primary" %}Primary{% /Badge %}
+  {% #Badge variant="secondary" %}Secondary{% /Badge %}
+  {% #Badge variant="accent" %}Accent{% /Badge %}
+  {% #Badge variant="ghost" %}Ghost{% /Badge %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Outline badge</p>
+  {% #Badge %}Default{% /Badge %}
+  {% #Badge variant="neutral" modifier="outline" %}Neutral{% /Badge %}
+  {% #Badge variant="primary" modifier="outline" %}Primary{% /Badge %}
+  {% #Badge variant="secondary" modifier="outline" %}Secondary{% /Badge %}
+  {% #Badge variant="accent" modifier="outline" %}Accent{% /Badge %}
+  {% #Badge variant="ghost" modifier="outline" %}Ghost{% /Badge %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Badge sizes</p>
+  {% #Badge size="xs" %}Extra small{% /Badge %}
+  {% #Badge size="sm" %}Small{% /Badge %}
+  {% #Badge %}Default{% /Badge %}
+  {% #Badge size="lg" %}Large{% /Badge %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Empty badge</p>
+  {% #Badge variant="primary" size="xs" %}{% /Badge %}
+  {% #Badge variant="primary" size="sm" %}{% /Badge %}
+  {% #Badge variant="primary" %}{% /Badge %}
+  {% #Badge variant="primary" size="lg" %}{% /Badge %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Badge with state colors</p>
+  {% #Badge variant="info" %}Info{% /Badge %}
+  {% #Badge variant="success" %}Success{% /Badge %}
+  {% #Badge variant="warning" %}Warning{% /Badge %}
+  {% #Badge variant="error"  %}Error{% /Badge %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Badge in a text</p>
+  <h2 class="text-xl">Heading {% #Badge size="lg" %}Info{% /Badge %}</h2>
+  <h3 class="text-lg">Heading {% #Badge size="md" %}Success{% /Badge %}</h3>
+  <h4 class="text-base">Heading {% #Badge size="sm" %}Warning{% /Badge %}</h4>
+  <h5 class="text-sm">Heading {% #Badge size="xs" %}Error{% /Badge %}</h5>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Badge in a button</p>
+  {% #Button %}
+    Inbox {% #Badge %}+99{% /Badge %}
+  {% /Button %}
+  {% #Button %}
+    Inbox {% #Badge variant="secondary" %}+99{% /Badge %}
+  {% /Button %}
+</div>

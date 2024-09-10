@@ -30,4 +30,4 @@ components:
   Image: "_ui/components/image.html"
   Kbd: "_ui/components/kbd.html"
   Stack: "_ui/layouts/stack.html"
-  Spinner: "_ui/components/spinner.html"
+  Loading: "_ui/components/loading.html"

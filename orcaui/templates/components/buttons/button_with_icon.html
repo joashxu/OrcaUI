@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="flex flex-col gap-2">
+    <div>
+      {% #Button %}{% Icon name="i-[heroicons--adjustments-horizontal]" %} Button{% /Button %}
+      {% #Button variant="neutral" %}{% Icon name="i-[heroicons--face-smile]" %} Neutral{% /Button %}
+      {% #Button variant="primary" %}{% Icon name="i-[heroicons--adjustments-horizontal]" %} Primary{% /Button %}
+      {% #Button variant="secondary" %}{% Icon name="i-[heroicons--face-smile]" %} Secondary{% /Button %}
+      {% #Button variant="accent" %}{% Icon name="i-[heroicons--archive-box-solid]" %} Accent{% /Button %}
+      {% #Button variant="ghost" %}{% Icon name="i-[heroicons--chat-bubble-bottom-center-solid]" %} Ghost{% /Button %}
+    </div>
+    <div>
+      {% #Button %}Button {% Icon name="i-[heroicons--adjustments-horizontal]" %}{% /Button %}
+      {% #Button variant="neutral" %}Neutral {% Icon name="i-[heroicons--face-smile]" %}{% /Button %}
+      {% #Button variant="primary" %}Primary {% Icon name="i-[heroicons--adjustments-horizontal]" %}{% /Button %}
+      {% #Button variant="secondary" %}Secondary {% Icon name="i-[heroicons--face-smile]" %}{% /Button %}
+      {% #Button variant="accent" %}Accent {% Icon name="i-[heroicons--archive-box-solid]" %}{% /Button %}
+      {% #Button variant="ghost" %}Secondary {% Icon name="i-[heroicons--chat-bubble-bottom-center-solid]" %}{% /Button %}
+    </div>
+  </div>
+{% endblock %}

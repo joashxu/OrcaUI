@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="flex flex-col gap-2">
+    <div>
+      {% #Button variant="primary" %}Primary{% /Button %}
+      {% #Button variant="primary" active %}Primary Active{% /Button %}
+      {% #Button variant="primary" disabled %}Primary Disabled{% /Button %}
+    </div>
+    <div>
+      {% #Button %}Secondary{% /Button %}
+      {% #Button active %}Secondary Active{% /Button %}
+      {% #Button disabled %}Secondary Disabled{% /Button %}
+    </div>
+    <div>
+      {% #Button variant="ghost" %}Ghost{% /Button %}
+      {% #Button variant="ghost" active %}Ghost Active{% /Button %}
+      {% #Button variant="ghost" disabled %}Ghost Disabled{% /Button %}
+    </div>
+  </div>
+{% endblock %}

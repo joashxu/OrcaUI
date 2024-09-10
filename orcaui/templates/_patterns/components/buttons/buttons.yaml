@@ -1,0 +1,52 @@
+name: Buttons
+context:
+  buttons:
+    - text: Button
+      variant:
+      icon_name: i-[heroicons--adjustments-horizontal]
+    - text: Neutral
+      variant: neutral
+      icon_name: i-[heroicons--face-smile]
+    - text: Primary
+      variant: primary
+      icon_name: i-[heroicons--adjustments-horizontal]
+    - text: Secondary
+      variant: secondary
+      icon_name: i-[heroicons--face-smile]
+    - text: Accent
+      variant: accent
+      icon_name: i-[heroicons--archive-box-solid]
+    - text: Ghost
+      variant: ghost
+      icon_name: i-[heroicons--chat-bubble-bottom-center-solid]
+  button_sizes:
+    - text: Extra small
+      size: xs
+    - text: Small
+      size: sm
+    - text: Base
+      size: base
+    - text: Large
+      size: lg
+  button_icons:
+    - name: i-[heroicons--adjustments-horizontal]
+      variant: primary
+    - name: i-[heroicons--face-smile]
+      variant: primary
+    - name: i-[heroicons--archive-box-solid]
+      variant:
+    - name: i-[heroicons--chat-bubble-bottom-center-solid]
+      variant:
+    - name: i-[heroicons--eye]
+      variant: ghost
+    - name: i-[heroicons--bell-alert]
+      variant: ghost
+  button_state_colors:
+    - text: Info
+      variant: info
+    - text: Success
+      variant: success
+    - text: Warning
+      variant: warning
+    - text: Error
+      variant: error

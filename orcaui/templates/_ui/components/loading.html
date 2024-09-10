@@ -1,0 +1,5 @@
+{% var size=size|match:"xs: loading-xs, sm: loading-sm, base: loading-base, lg: loading-lg"|default:"loading-base" %}
+{% var variant=variant|match:"spinner: loading-spinner, dots: loading-dots, ring: loading-ring, ball: loading-ball, bars: loading-bars, infinitiy: loading-infinity"|default:"loading-spinner" %}
+{% var color=color|default:"" %}
+
+<span class="loading {{ variant }} {{ size }} {{ color }} {{ classes }}"></span>

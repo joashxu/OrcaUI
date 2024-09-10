@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="flex flex-col gap-2">
+    <div>
+      {% #Button variant="primary" %}{% Loading size="xs" %} Primary{% /Button %}
+      {% #Button variant="secondary" %}{% Loading size="xs" %} Secondary{% /Button %}
+      {% #Button variant="tertiary" %}{% Loading size="xs" %} Ghost{% /Button %}
+    </div>
+    <div>
+      {% #Button variant="primary" disabled %}{% Loading size="xs" %} Primary{% /Button %}
+      {% #Button variant="secondary" disabled %}{% Loading size="xs" %} Secondary{% /Button %}
+      {% #Button variant="tertiary" disabled %}{% Loading size="xs" %} Ghost{% /Button %}
+    </div>
+  </div>
+{% endblock %}

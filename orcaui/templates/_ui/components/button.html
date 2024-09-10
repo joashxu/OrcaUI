@@ -1,0 +1,15 @@
+{% var size=size|match:"xs: btn-xs , sm: btn-sm , lg: btn-lg "|default:"btn-md" %}
+{% var variant=variant|match:"neutral: btn-neutral , primary: btn-primary , secondary: btn-secondary , accent: btn-accent , ghost: btn-ghost , info: btn-info , success: btn-success , warning: btn-warning , error: btn-error , link: btn-link "|default:"" %}
+{% var shape=shape|match:"square: btn-square , circle: btn-circle "|default:"" %}
+{% var modifier=modifier|match:"outline: btn-outline "|default:"" %}
+{% var type=type|default:"button" %}
+{% var el=as_el|match:"div: div , a: a"|default:"button" %}
+
+<{{el}} {% if el == "button" %}type="{{ type }}"{% endif %}
+        {% if el == "div" %}tabindex="0" role="button"{% endif %}
+        class="btn {% if active %}btn-active{% endif %} {% if block %}btn-block{% endif %} {{ shape }} {{ modifier }} {{ variant }} {{ size }} {{ classes }}"
+        {% attrs id name form value disabled href %}
+        {% attrs hx-get x-post hx-confirm %}
+        {% attrs x-show x-cloak x-ref @click @click.once :id :disabled :class %}>
+  {{ children }}
+</{{el}}>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="flex flex-col gap-2">
+    <div>
+      {% #Button modifier="outline" %}Default{% /Button %}
+      {% #Button variant="primary" modifier="outline" %}Primary{% /Button %}
+      {% #Button variant="secondary" modifier="outline" %}Secondary{% /Button %}
+      {% #Button variant="accent" modifier="outline" %}Accent{% /Button %}
+    </div>
+    <div>
+      {% #Button variant="info" modifier="outline" %}Info{% /Button %}
+      {% #Button variant="success" modifier="outline" %}Success{% /Button %}
+      {% #Button variant="warning" modifier="outline" %}Warning{% /Button %}
+      {% #Button variant="error" modifier="outline" %}Error{% /Button %}
+      </div>
+  </div>
+{% endblock %}

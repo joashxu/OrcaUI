@@ -1,0 +1,124 @@
+<div>
+  <p class="font-medium mb-2">Buttons</p>
+  {% for button in buttons %}
+      {% #Button variant=button.variant %}{{ button.text }}{% /Button %}
+  {% endfor %}
+  {% #Button variant="link" %}Link{% /Button %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Buttons with state colors</p>
+  {% for button in button_state_colors %}
+      {% #Button variant=button.variant %}{{ button.text }}{% /Button %}
+  {% endfor %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Buttons with modifier</p>
+  <div class="flex flex-col gap-2">
+    <div>
+      {% #Button modifier="outline" %}Default{% /Button %}
+      {% #Button modifier="outline" variant="primary" %}Primary{% /Button %}
+      {% #Button modifier="outline" variant="secondary" %}Secondary{% /Button %}
+      {% #Button modifier="outline" variant="accent" %}Accent{% /Button %}
+    </div>
+    <div>
+      {% for button in button_state_colors %}
+          {% #Button variant=button.variant modifier="outline" %}{{ button.text }}{% /Button %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Button Sizes</p>
+  {% for button in button_sizes %}
+    {% #Button size=button.size %}{{ button.text }}{% /Button %}
+  {% endfor %}
+</div>
+
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Icon Buttons</p>
+  <div class="flex flex-col gap-2">
+    <div>
+      {% for button in button_icons %}
+        {% #Button variant=button.variant %}{% Icon name=button.name %}{% /Button %}
+      {% endfor %}
+    </div>
+    <div>
+      {% for button in button_icons %}
+        {% #Button shape="square" variant=button.variant %}{% Icon name=button.name %}{% /Button %}
+      {% endfor %}
+    </div>
+    <div>
+      {% for button in button_icons %}
+        {% #Button shape="circle" variant=button.variant %}{% Icon name=button.name %}{% /Button %}
+      {% endfor %}
+    </div>
+    <div>
+      {% for button in button_icons %}
+        {% #Button shape="square" modifier="outline" variant=button.variant %}{% Icon name=button.name %}{% /Button %}
+      {% endfor %}
+    </div>
+    <div>
+      {% for button in button_icons %}
+        {% #Button shape="circle" modifier="outline" variant=button.variant %}{% Icon name=button.name %}{% /Button %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Buttons with Icon</p>
+  <div class="mb-2">
+    {% for button in buttons %}
+      {% #Button variant=button.variant %}
+        {% Icon name=button.icon_name %} {{ button.text }}
+      {% /Button %}
+    {% endfor %}
+  </div>
+  <div>
+    {% for button in buttons %}
+      {% #Button variant=button.variant %}
+        {{ button.text }} {% Icon name=button.icon_name %}
+      {% /Button %}
+    {% endfor %}
+  </div>
+</div>
+
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Buttons States</p>
+
+  {% #Button variant="primary" %}Primary{% /Button %}
+  {% #Button variant="primary" active %}Primary Active{% /Button %}
+  {% #Button variant="primary" disabled %}Primary Disabled{% /Button %}
+  <div class="mt-4 mb-4">
+  {% #Button %}Secondary{% /Button %}
+  {% #Button active %}Secondary Active{% /Button %}
+  {% #Button disabled %}Secondary Disabled{% /Button %}
+  </div>
+  {% #Button variant="ghost" %}Ghost{% /Button %}
+  {% #Button variant="ghost" active %}Ghost Active{% /Button %}
+  {% #Button variant="ghost" disabled %}Ghost Disabled{% /Button %}
+</div>
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Loading Button</p>
+
+  {% #Button variant="primary" disabled %}{% Loading class_name="me-2" %} Primary{% /Button %}
+  {% #Button variant="secondary" disabled %}{% Loading class_name="me-2" %} Secondary{% /Button %}
+  {% #Button variant="tertiary" disabled %}{% Loading class_name="me-2" %} Ghost{% /Button %}
+</div>
+
+
+<div class="mt-8">
+  <p class="font-medium mb-2">Link as Button</p>
+
+  {% #Button variant="primary" href="#" %}Primary{% /Button %}
+  {% #Button variant="secondary" href="#" %}Secondary{% /Button %}
+  {% #Button variant="accent" href="#" %}Ghost{% /Button %}
+</div>
+
+
