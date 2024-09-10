@@ -39,6 +39,7 @@ urlpatterns_badge = [
     path("badges/empty", TemplateView.as_view(template_name="components/badges/badge_empty.html")),
     path("badges/state-color", TemplateView.as_view(template_name="components/badges/badge_state_color.html")),
     path("badges/in-text", TemplateView.as_view(template_name="components/badges/badge_in_text.html")),
+    path("badges/in-button", TemplateView.as_view(template_name="components/badges/badge_in_button.html")),
 ]
 
 urlpatterns = urlpatterns_button + urlpatterns_accordion + urlpatterns_avatar + urlpatterns_badge
