@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% #Card width="w-96" %}
+    {% #CardBody %}
+      {% #CardTitle %}Notifications{% /CardTitle %}
+  
+      <p class="text-gray-500 text-sm">You have 3 unread messages.</p>
+      <div class="flex items-center space-x-4 rounded-md border p-4 mb-2">
+        {% Icon name="i-[heroicons--bell-alert]" %}
+        <div class="flex-1 space-y-1">
+          <p class="text-sm font-medium leading-none">Push Notifications</p>
+          <p class="text-sm text-muted-foreground">Send notifications to device.</p>
+        </div>
+      </div>
+      <ul class="[&>li]:mb-2 list-disc px-4 mb-4">
+        <li>
+          <span class="font-medium">Your call has been confirmed.</span>
+          <span class="block text-sm text-gray-500">2 minutes ago</span>
+        </li>
+        <li>
+          <span class="font-medium">You have a new message!</span>
+          <span class="block text-sm text-gray-500">1 hour ago</span>
+        </li>
+        <li>
+          <span class="font-medium">Your subscription is expiring soon!</span>
+          <span class="block text-sm text-gray-500">1 day ago</span>
+        </li>
+      </ul>
+  
+      {% #CardActions %}
+        {% #Button variant="neutral" size="sm" block %}Mark all as read {% /Button %}
+      {% /CardActions %}
+    {% /CardBody %}
+  {% /Card %}
+{% endblock %}

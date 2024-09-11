@@ -42,4 +42,15 @@ urlpatterns_badge = [
     path("badges/in-button", TemplateView.as_view(template_name="components/badges/badge_in_button.html")),
 ]
 
-urlpatterns = urlpatterns_button + urlpatterns_accordion + urlpatterns_avatar + urlpatterns_badge
+# Cards
+urlpatterns_card = [
+    path("card/default", TemplateView.as_view(template_name="components/cards/card_default.html")),
+    path("card/top-image", TemplateView.as_view(template_name="components/cards/card_top_image.html")),
+    path("card/bottom-image", TemplateView.as_view(template_name="components/cards/card_bottom_image.html")),
+    path("card/vertical", TemplateView.as_view(template_name="components/cards/card_vertical.html")),
+    path("card/showcase", TemplateView.as_view(template_name="components/cards/card_showcase.html")),
+]
+
+
+urlpatterns = urlpatterns_button + urlpatterns_accordion + urlpatterns_avatar
+urlpatterns += urlpatterns_badge + urlpatterns_card

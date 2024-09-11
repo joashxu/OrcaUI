@@ -1,0 +1,7 @@
+{% var bg=bg|default:"bg-base-100" %}
+{% var width=width|default:"w-full" %}
+{% var shadow=shadow|match:"sm: shadow-sm , base: shadow , md: shadow-md , lg: shadow-lg"|default:"shadow-md" %}
+
+<div class="card {{ bg }} {{ width }} {{ shadow }} {% if side %}card-side{% endif %} {{ classes }}">
+  {{ children }}
+</div>

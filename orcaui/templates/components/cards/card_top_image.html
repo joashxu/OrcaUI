@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% #Card width="w-96" %}
+    <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
+    {% #CardBody %}
+      {% #CardTitle %}Shoes!{% /CardTitle %}
+      <p>These are some shoes. They're the best shoes!</p>
+      {% #CardActions %}
+        {% #Button variant="primary"%}Buy Now{% /Button %}
+      {% /CardActions %}
+    {% /CardBody %}
+  {% /Card %}
+{% endblock %}
