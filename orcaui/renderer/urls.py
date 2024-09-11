@@ -51,6 +51,15 @@ urlpatterns_card = [
     path("card/showcase", TemplateView.as_view(template_name="components/cards/card_showcase.html")),
 ]
 
+# Kbd
+urlpatterns_kbd = [
+    path("kbd/default", TemplateView.as_view(template_name="components/kbd/kbd_default.html")),
+    path("kbd/sizes", TemplateView.as_view(template_name="components/kbd/kbd_sizes.html")),
+    path("kbd/in-text", TemplateView.as_view(template_name="components/kbd/kbd_in_text.html")),
+    path("kbd/combination", TemplateView.as_view(template_name="components/kbd/kbd_combi.html")),
+    path("kbd/function-key", TemplateView.as_view(template_name="components/kbd/kbd_function_key.html")),
+]
 
 urlpatterns = urlpatterns_button + urlpatterns_accordion + urlpatterns_avatar
 urlpatterns += urlpatterns_badge + urlpatterns_card
+urlpatterns += urlpatterns_badge + urlpatterns_kbd

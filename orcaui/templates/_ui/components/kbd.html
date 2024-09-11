@@ -1,0 +1,3 @@
+{% var size=size|match:"xs: kbd-xs , sm: kbd-sm , md: kbd-md , lg: kbd-lg "|default:"kbd-md" %}
+
+<kbd class="kbd {{ size }}">{{ children }}</kbd>
