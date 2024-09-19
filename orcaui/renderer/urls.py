@@ -47,7 +47,7 @@ urlpatterns_card = [
     path("card/default", TemplateView.as_view(template_name="components/cards/card_default.html")),
     path("card/top-image", TemplateView.as_view(template_name="components/cards/card_top_image.html")),
     path("card/bottom-image", TemplateView.as_view(template_name="components/cards/card_bottom_image.html")),
-    path("card/vertical", TemplateView.as_view(template_name="components/cards/card_vertical.html")),
+    path("card/horizontal", TemplateView.as_view(template_name="components/cards/card_horizontal.html")),
     path("card/showcase", TemplateView.as_view(template_name="components/cards/card_showcase.html")),
 ]
 
