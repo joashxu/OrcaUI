@@ -30,7 +30,7 @@
         <option value="dark">Dark</option>
         <option value="cupcake">Cupcake</option>
         <option value="nord">Nord</option>
-        <option value="corporate">Corporate</option>
+        <option value="corporate" selected>Corporate</option>
       </select>
     </div>
   </div>
@@ -40,7 +40,9 @@
       {{ pattern_library_rendered_pattern }}
     {% endblock content %}
   </div>
-  
+
+  <script defer src="https://unpkg.com/htmx.org@2.0.3"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>

@@ -1,0 +1,98 @@
+<div class="mb-10">
+  <p class="font-medium mb-2">Modal</p>
+  {% #Modal %}
+    {% #ModalTrigger %}
+      {% #Button %}Open Modal{% /Button %}
+    {% /ModalTrigger %}
+    {% #ModalContent %}
+      {% #ModalDialog %}
+        {% #ModalDialogHeader %}Hello!{% /ModalDialogHeader %}
+        {% #ModalDialogContent %}Modal Content{% /ModalDialogContent %}
+      {% /ModalDialog %}
+    {% /ModalContent %}
+  {% /Modal %}
+</div>
+
+
+<div class="mb-10">
+  <p class="font-medium mb-2">Modal with Remote URL</p>
+  {% #Modal %}
+    {% #ModalTrigger %}
+      {% #Button %}Open Modal{% /Button %}
+    {% /ModalTrigger %}
+    {% #ModalContent %}
+      {% #ModalDialog %}
+        {% #ModalDialogHeader %}Remote URL{% /ModalDialogHeader %}
+        {% #ModalDialogContent %}
+          {% ModalContentDynamic url="/buttons/default" %}
+        {% /ModalDialogContent %}
+      {% /ModalDialog %}
+    {% /ModalContent %}
+  {% /Modal %}
+</div>
+
+
+<div class="mb-10">
+  <p class="font-medium mb-2">Error Handling</p>
+  {% #Modal %}
+    {% #ModalTrigger %}
+      {% #Button %}Open Modal{% /Button %}
+    {% /ModalTrigger %}
+    {% #ModalContent %}
+      {% #ModalDialog %}
+        {% #ModalDialogHeader %}Remote URL{% /ModalDialogHeader %}
+        {% #ModalDialogContent %}
+          {% ModalContentDynamic url="/buttons/default2" %}
+        {% /ModalDialogContent %}
+      {% /ModalDialog %}
+    {% /ModalContent %}
+  {% /Modal %}
+</div>
+
+
+<div class="mb-10">
+  <p class="font-medium mb-2">Modal Size</p>
+  {% #Modal %}
+    {% #ModalTrigger %}
+      {% #Button %}Open Modal{% /Button %}
+    {% /ModalTrigger %}
+    {% #ModalContent size="max-w-4xl" %}
+      {% #ModalDialog %}
+        {% #ModalDialogHeader %}Remote URL{% /ModalDialogHeader %}
+        {% #ModalDialogContent %}
+          {% ModalContentDynamic url="/buttons/default" %}
+        {% /ModalDialogContent %}
+      {% /ModalDialog %}
+    {% /ModalContent %}
+  {% /Modal %}
+</div>
+
+
+<div class="mb-10">
+  <p class="font-medium mb-2">Detached Modal</p>
+
+  <div class="flex flex-row gap-2">
+    {% #ModalTrigger data-modal-target="modal-one" data-modal-url="/buttons/default" %}
+      {% #Button %}Show Default Button{% /Button %}
+    {% /ModalTrigger %}
+
+    {% #ModalTrigger data-modal-target="modal-one" data-modal-url="/buttons/with-icon" %}
+      {% #Button %}Show Button with Icon{% /Button %}
+    {% /ModalTrigger %}
+
+    {% #ModalTrigger data-modal-target="modal-one" data-modal-url="/buttons/loading" %}
+      {% #Button %}Show Loading Button{% /Button %}
+    {% /ModalTrigger %}
+  </div>
+
+  {% #Modal id="modal-one" %}
+    {% #ModalContent %}
+      {% #ModalDialog %}
+        {% #ModalDialogHeader %}Remote URL{% /ModalDialogHeader %}
+        {% #ModalDialogContent %}
+          {% ModalContentDynamic :hx-get="context.url" %}
+        {% /ModalDialogContent %}
+      {% /ModalDialog %}
+    {% /ModalContent %}
+  {% /Modal %}
+</div>

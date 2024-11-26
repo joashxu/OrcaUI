@@ -1,0 +1,8 @@
+<div {% attrs id %}
+     x-data="{ modalOpen: false, context:{}, openModal(){ this.modalOpen = true }, closeModal() { this.modalOpen = false } }"
+     @modal-open.window="if ($el.id && $event.detail.target === $el.id) { context = $event.detail; openModal(); }"
+     @modal-close.window=" if ($el.id && $event.detail.context.target === $el.id) { closeModal() }"
+     @keydown.escape.window="modalOpen = false"
+     class="{{ classes }}">
+  {{ children }}
+</div>

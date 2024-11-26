@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% #Modal %}
+    {% #ModalTrigger %}
+      {% #Button %}Open Modal{% /Button %}
+    {% /ModalTrigger %}
+    {% #ModalContent %}
+      {% #ModalDialog %}
+        {% #ModalDialogHeader %}Remote URL{% /ModalDialogHeader %}
+        {% #ModalDialogContent %}
+          {% ModalContentDynamic url="/buttons/default" %}
+        {% /ModalDialogContent %}
+      {% /ModalDialog %}
+    {% /ModalContent %}
+  {% /Modal %}
+{% endblock %}

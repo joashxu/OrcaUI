@@ -1,0 +1,18 @@
+{% var size=size|default:"max-w-2xl" %}
+
+
+<template x-teleport="body">
+  <div x-show="modalOpen" x-cloak>
+    <div class="modal" :class="modalOpen ? 'modal-open': ''">
+      <div x-show="modalOpen"
+           x-transition
+           x-trap.inert.noscroll="modalOpen"
+           class="modal-box p-0 {{ size }}">
+
+        <template x-if="modalOpen">
+          <div>{{ children }}</div>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>

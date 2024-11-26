@@ -16,6 +16,15 @@ urlpatterns_button = [
     path("buttons/link", TemplateView.as_view(template_name="components/buttons/link_as_button.html")),
 ]
 
+# Modal
+urlpatterns_modal = [
+    path("modals/default", TemplateView.as_view(template_name="components/modals/modal_default.html")),
+    path("modals/remote-url", TemplateView.as_view(template_name="components/modals/modal_remote_url.html")),
+    path("modals/error-handling", TemplateView.as_view(template_name="components/modals/modal_error_handling.html")),
+    path("modals/size", TemplateView.as_view(template_name="components/modals/modal_size.html")),
+    path("modals/detached", TemplateView.as_view(template_name="components/modals/modal_detached.html")),
+]
+
 # Accordions
 urlpatterns_accordion = [
     path("accordions/default", TemplateView.as_view(template_name="components/accordions/accordion_default.html")),
@@ -60,6 +69,9 @@ urlpatterns_kbd = [
     path("kbd/function-key", TemplateView.as_view(template_name="components/kbd/kbd_function_key.html")),
 ]
 
-urlpatterns = urlpatterns_button + urlpatterns_accordion + urlpatterns_avatar
+
+
+urlpatterns = urlpatterns_button + urlpatterns_modal
+urlpatterns += urlpatterns_accordion + urlpatterns_avatar
 urlpatterns += urlpatterns_badge + urlpatterns_card
 urlpatterns += urlpatterns_badge + urlpatterns_kbd

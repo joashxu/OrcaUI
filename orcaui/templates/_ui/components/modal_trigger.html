@@ -1,0 +1,16 @@
+<div x-data
+     @click="
+        if ('modalOpen' in $data) {
+          modalOpen = true;
+        } else {
+          let context = {};
+          let attributes = Array.from($el.attributes).filter(attr => attr.name.startsWith('data-modal'));
+          attributes.forEach(attr => {
+              const key = attr.name.replace('data-modal-', '');
+              context[key] = attr.value;
+          });
+          $dispatch('modal-open', context);
+        }"
+     {% attrs data-modal-target data-modal-url %}>
+  {{ children }}
+</div>

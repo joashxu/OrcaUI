@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div>
+    <div class="flex gap-2">
+      {% #ModalTrigger data-modal-target="modal-one" data-modal-url="/buttons/default" %}
+        {% #Button %}Show Default Button{% /Button %}
+      {% /ModalTrigger %}
+  
+      {% #ModalTrigger data-modal-target="modal-one" data-modal-url="/buttons/with-icon" %}
+        {% #Button %}Show Button with Icon{% /Button %}
+      {% /ModalTrigger %}
+  
+      {% #ModalTrigger data-modal-target="modal-one" data-modal-url="/buttons/loading" %}
+        {% #Button %}Show Loading Button{% /Button %}
+      {% /ModalTrigger %}
+    </div>
+
+  {% #Modal id="modal-one" %}
+    {% #ModalContent %}
+      {% #ModalDialog %}
+        {% #ModalDialogHeader %}Remote URL{% /ModalDialogHeader %}
+        {% #ModalDialogContent %}
+          {% ModalContentDynamic :hx-get="context.url" %}
+        {% /ModalDialogContent %}
+      {% /ModalDialog %}
+    {% /ModalContent %}
+  {% /Modal %}
+</div>
+{% endblock %}
