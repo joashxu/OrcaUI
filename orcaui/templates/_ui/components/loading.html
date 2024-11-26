@@ -2,4 +2,4 @@
 {% var variant=variant|match:"spinner: loading-spinner, dots: loading-dots, ring: loading-ring, ball: loading-ball, bars: loading-bars, infinitiy: loading-infinity"|default:"loading-spinner" %}
 {% var color=color|default:"" %}
 
-<span class="loading {{ variant }} {{ size }} {{ color }} {{ classes }}"></span>
+<span {% attrs x-show %} class="loading {{ variant }} {{ size }} {{ color }} {{ classes }}"></span>
